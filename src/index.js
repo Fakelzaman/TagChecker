@@ -14,7 +14,7 @@ const checkText = (text) => {
     }
 
     if(openingTags[0] != null){ //Check to see if we have any tags unmatched
-      console.log(`Expected </${openingTags[0][1]} found #`)  //Fail if we have unmatched Opening tags
+      console.log(`Expected </${openingTags[0][1]}> found #`)  //Fail if we have unmatched Opening tags
       return false
     }
   }

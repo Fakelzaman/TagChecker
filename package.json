@@ -4,8 +4,9 @@
   "description": "Tag checker task set by SpokePhone.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest",
-    "lint-staged": "eslint --fix ./src"
+    "test": "jest --coverage",
+    "lint-staged": "eslint --fix ./src",
+    "start": "node src/start.js %npm_config_text%"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint-staged && npm test --coverage"
+      "pre-commit": "npm run lint-staged && npm test"
     }
   },
   "lint-staged": {
