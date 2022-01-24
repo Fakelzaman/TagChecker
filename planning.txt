@@ -1,0 +1,35 @@
+Input:
+String of text
+
+Output:
+Success: "Correctly tagged paragraph"
+Failed: "Expected <expected> found <unexpected>"
+
+Conditions:
+- Check all tags that open have a closing tag
+- Check all closing tags have an opening tag
+
+
+Definitions:
+- Tag is a pattern of text that matches a single capital letter inside angle brackets  (<T>)
+- A closing tag is a tag with a single capital letter with inside angle brackets with a forward slash prior to the letter (</T>)
+
+Assumptions:
+- A paragraph does not have to contain any tags
+- Tags contain ONLY 1 letter. ie maximum of 24 tag types
+- The program only needs to be command line compatible. ie node script
+- No authentication is needed
+- No external calls are needed to be made
+- Can run offline
+- Child tags cannot be closed outside the parent Tag
+
+
+Approach
+- match all cases of patterns to an array
+- iterate over the array looking, if opener shift to a queue to check
+- if next in array is an open add to queue and look for that one
+- if next in array is the closing, remove and carry on
+- if next in array is wrong closing, throw error
+- if both arrays are empty success
+- if initial array has item expecting a blank
+- if queue array has item missing a closing

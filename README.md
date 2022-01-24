@@ -1,2 +1,2 @@
 # TagChecker
-Tag checker task set by SpokePhone
+Tag checker task set by SpokePhone.

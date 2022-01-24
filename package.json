@@ -1,0 +1,48 @@
+{
+  "name": "tagchecker",
+  "version": "1.0.0",
+  "description": "Tag checker task set by SpokePhone.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint-staged": "eslint --fix ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fakelzaman/TagChecker.git"
+  },
+  "author": "Liam Reeves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fakelzaman/TagChecker/issues"
+  },
+  "homepage": "https://github.com/Fakelzaman/TagChecker#readme",
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-plugin-jest": "^25.7.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "npm run test",
+      "git add"
+    ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "functions": 80,
+        "lines": 80,
+        "branches": 80
+      }
+    }
+  }
+}
