@@ -28,6 +28,13 @@ to run the function in the terminal.
 
 The terminal will then ask for you to paste in the text to use.
 
+### Editing the code ###
+The main function can be found within the src/ folder.
+
+Here are two main scripts:
+- index.js - which has the logic of the checking function 
+- start.js - a launching function for the command line
+
 ### Running Tests ###
 Jest is used for unit testing. To run the tests simply use command `npm test`
 
